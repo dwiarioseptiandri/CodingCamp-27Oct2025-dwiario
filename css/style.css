@@ -1,0 +1,157 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: url('https://images.unsplash.com/photo-1717851692937-f2ab7adb7630?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-radius: 15px;
+  padding: 30px;
+  width: 620px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-section input[type="text"],
+.input-section input[type="date"] {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #eee;
+  font-size: 0.95rem;
+}
+
+.input-section button {
+  background: #3b3b3b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-section button:hover {
+  background: #555;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filter-section select,
+.filter-section button {
+  background: #2a2a2a;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-section button:hover,
+.filter-section select:hover {
+  background: #444;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.task-table th {
+  background: #2a2a2a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.task-table tr {
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.task-table tr:hover {
+  background: #333;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+}
+
+.action-btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 85px;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+.complete-btn {
+  background: #555;
+  color: #fff;
+}
+
+.complete-btn:hover {
+  background: #777;
+}
+
+.delete-btn {
+  background: #7a1f1f;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #a32626;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}

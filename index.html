@@ -7,9 +7,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="js/script.js"></script>
+  <div class="todo-container">
+    <h1>Todo List</h1>
+
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Add a todo..." />
+      <input type="date" id="dateInput" />
+      <button id="addBtn">+</button>
+    </div>
+
+    <div class="filter-section">
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="done">Done</option>
+        <option value="pending">Pending</option>
+      </select>
+      <button id="deleteAllBtn">Delete All</button>
+    </div>
+
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="taskList">
+        <tr><td colspan="4" class="empty">No task found</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
